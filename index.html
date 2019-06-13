@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Elvon Corpers' Hookup!</title>
+  <!-- <link href="font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="animate.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>Elvon</span> Corpers' Hookup</h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        <h3>Hook up with corpers in your area!</h3>
+        <ul>
+          <li><i class="fa fa-road"></i> </li>
+          <li><i class="fa fa-phone"></i> </li>
+          <li><i class="fa fa-envelope"></i> </li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Email Us</h3>
+        <div class="alert">Your message has been sent</div>
+        <form id="contactForm">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email" id="email" required>
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <small class="small">(Just incase you do not have an active FB account)</small>
+            <input type="text" name="phone" id="phone">
+          </p>
+          <p>
+            <label>Facebook Name</label>
+            <small class="small">(Just incase you do not want to drop your phone number)</small>
+            <input type="text" name="facebook" id="facebook">
+          </p>
+          <p>
+            <label>State of Residence</label>
+            <input type="text" name="residence" id="residence">
+          </p>
+          <p>
+            <label>State Posted To</label>
+            <input type="text" name="posting" id="posting">
+          </p>
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5" id="message"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
