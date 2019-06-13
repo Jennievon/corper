@@ -1,4 +1,4 @@
-// Your web app's Firebase configuration
+// Web app's Firebase configuration
 var firebaseConfig = {
   apiKey: "AIzaSyCm3iuxfD4bGD4WhPx25w6bI4W9oPYfrsQ",
   authDomain: "elvon-590dc.firebaseapp.com",
@@ -8,20 +8,20 @@ var firebaseConfig = {
   messagingSenderId: "66794714951",
   appId: "1:66794714951:web:1c658c90e4286c0c"
 };
-// Initialize Firebase
+// Firebase initialisation
 firebase.initializeApp(firebaseConfig);
 
 // Reference messages collection
 var messagesRef = firebase.database().ref('messages');
 
-// Listen for form submit
+// Listening for form submission
 document.getElementById('contactForm').addEventListener('submit', submitForm);
 
-// Submit form
+// Function to submit form
 function submitForm(e){
   e.preventDefault();
 
-  // Get values
+  // Getting values
   var name = getInputVal('name');
   var email = getInputVal('email');
   var phone = getInputVal('phone');
@@ -30,27 +30,27 @@ function submitForm(e){
   var posting = getInputVal('posting');
   var message = getInputVal('message');
 
-  // Save message
+  // Saving messages
   saveMessage(name, email, phone, facebook, residence, posting, message);
 
-  // Show alert
+  // Showing alert 
   document.querySelector('.alert').style.display = 'block';
 
-  // Hide alert after 3 seconds
+  // Hiding alert - After 3 seconds
   setTimeout(function(){
     document.querySelector('.alert').style.display = 'none';
   },3000);
 
-  // Clear form
+  // Clearing form for new input
   document.getElementById('contactForm').reset();
 }
 
-// Function to get get form values
+// Function to get the form values
 function getInputVal(id){
   return document.getElementById(id).value;
 }
 
-// Save message to firebase
+// Saving messages to firebase
 function saveMessage(name, email, phone, facebook, residence, posting, message){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
