@@ -30,9 +30,6 @@ function submitForm(e){
   var posting = getInputVal('posting');
   var message = getInputVal('message');
 
-  // Saving messages
-  saveMessage(name, email, phone, facebook, residence, posting, message);
-
   // Showing alert 
   document.querySelector('.alert').style.display = 'block';
 
@@ -45,12 +42,17 @@ function submitForm(e){
   document.getElementById('contactForm').reset();
 }
 
+
+
 // Function to get the form values
 function getInputVal(id){
   return document.getElementById(id).value;
 }
 
+
+
 // Saving messages to firebase
+saveMessage(name, email, phone, facebook, residence, posting, message);
 function saveMessage(name, email, phone, facebook, residence, posting, message){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
